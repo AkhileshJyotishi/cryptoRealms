@@ -1,4 +1,5 @@
 import React from "react";
+import Exchange from "../../assets/exchange";
 
 interface IitemProps {
   title: string;
@@ -6,10 +7,10 @@ interface IitemProps {
 }
 const Item = ({ title, subtitle }: IitemProps) => {
   return (
-    <p className="flex flex-col gap-y-[0.3px] py-2 border-b-[2px]">
-      <p className="font-[500] text-[14px]">{title}</p>
-      <p className="text-[20px] font-medium">{subtitle}</p>
-    </p>
+    <div className="flex flex-col gap-y-[0.3px] py-2 border-b-[2px]">
+      <p className="font-[500] text-[13px]">{title}</p>
+      <p className="text-[17px] font-medium">{subtitle}</p>
+    </div>
   );
 };
 
@@ -25,10 +26,10 @@ const PriceSection = () => {
           name="price"
           id="price"
           placeholder="26.67"
-          className="rounded-xl px-2 py-1 max-w-[160px]"
+          className="rounded-xl px-2 py-1 max-w-[140px]"
         />
       </div>
-      <div className="arrow"> A </div>
+      <Exchange />
       <div className="flex flex-col gap-y-1">
         <p className="font-[500]">
           Equity <span className="font-[300] text-xs">(in %)</span>
@@ -38,7 +39,7 @@ const PriceSection = () => {
           name="equity"
           id="equity"
           placeholder="26.67"
-          className="rounded-xl px-2 py-1 max-w-[160px]"
+          className="rounded-xl px-2 py-1 max-w-[140px]"
         />
       </div>
     </div>
@@ -46,8 +47,8 @@ const PriceSection = () => {
 };
 const ParticularLandCard = () => {
   return (
-    <div className="bg-[#ffffff49] max-w-md  min-w-96 rounded-xl border-[0.1px] border-[#fff] backdrop-blur-[6px] shadow-[0_4px_30px_0_rgba(0,0,0,0.1)] flex flex-col p-5">
-      <p className="text-[28px] font-semibold pb-1 border-b-[2px]">
+    <div className="bg-[#ffffff49] max-w-sm  min-w-96 rounded-xl border-[0.1px] border-[#fff] backdrop-blur-[6px] shadow-[0_4px_30px_0_rgba(0,0,0,0.1)] flex flex-col p-5">
+      <p className="text-[26px] font-semibold pb-1 border-b-[2px]">
         IIIT Lucknow Gomti Nagar
       </p>
       <Item title="Owner Name" subtitle="Yash Agarwal" />

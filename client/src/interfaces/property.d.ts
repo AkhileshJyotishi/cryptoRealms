@@ -9,3 +9,13 @@ interface Iproperty {
   percentage: number;
   equity?: number;
 }
+
+interface ILandDescProps {
+  name: string;
+  location: string;
+  room?: number;
+  bathroom?: number;
+  area?: number;
+  parking?: string;
+  description?:string
+}
