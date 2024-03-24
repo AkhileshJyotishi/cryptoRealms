@@ -34,7 +34,7 @@ const AddProperty = () => {
       const imageUrl: string[] = [];
       if (files && files.length > 0) {
         // @ts-ignore
-        files.map(async (file: any) => {
+        Array.from(files).map(async (file: any) => {
           const image = new FormData();
           image.append("file", file);
           image.append("cloud_name", "di8ui03yr");
@@ -116,8 +116,8 @@ const AddProperty = () => {
             }}
             id="description"
             value={formfields.description}
-            placeholder="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. Lorem Ipsum is simply dummy text of the printing. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. Lorem Ipsum is simply dummy text of the printing"
-            className="placeholder:text-white font-light placeholder:font-light bg-transparent border rounded-xl px-4 py-2 text-sm w-full h-[120px]"
+            placeholder="Description..."
+            className="placeholder:text-white font-light placeholder:font-light bg-transparent border rounded-xl px-4 py-2 text-sm w-full h-[80px]"
           />
         </div>
         <div className="w-full flex flex-col gap-y-2">
@@ -139,9 +139,9 @@ const AddProperty = () => {
                     >
                       <path
                         stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
                         d="M13 13h3a3 3 0 0 0 0-6h-.025A5.56 5.56 0 0 0 16 6.5 5.5 5.5 0 0 0 5.207 5.021C5.137 5.017 5.071 5 5 5a4 4 0 0 0 0 8h2.167M10 15V6m0 0L8 8m2-2 2 2"
                       />
                     </svg>
@@ -168,8 +168,8 @@ const AddProperty = () => {
               </div>
             )}
             {formfields.files && formfields.files.length > 0 && (
-              <div className="text-3xl text-center font-[400]">
-                Image Uplaoded
+              <div className="text-3xl text-center font-[400] p-2">
+                Image Uploaded
               </div>
             )}
           </div>
