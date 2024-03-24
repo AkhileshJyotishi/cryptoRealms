@@ -27,9 +27,9 @@ const connectWallet = () => {};
 
 const Navbar = () => {
   return (
-    <div className="z-50 max-w-[1660px] mx-auto w-[80%] fixed top-[40px] flex justify-between items-center px-8 py-3 bg-[#ffffff49] rounded-full border-[1px] border-[#fff] backdrop-blur-[6px] shadow-[0_4px_30px_0_rgba(0,0,0,0.1)]">
+    <div className="z-50 max-w-[1660px]  w-[80%] fixed top-[40px]  flex justify-between items-center px-8 py-3 bg-[#ffffff49] rounded-full border-[1px] border-[#fff] backdrop-blur-[6px] shadow-[0_4px_30px_0_rgba(0,0,0,0.1)]">
       <div className="text-white font-bold">Logo Here</div>
-      <div className="bg-white rounded-full w-[40%] flex gap-6 justify-around text-black px-4 py-1">
+      <div className="bg-white rounded-full w-[36%] flex gap-4 justify-around text-black px-4 py-1">
         {NavbarLink.map((link, ind) => {
           return (
             <Link key={ind} href={link.path}>

@@ -52,8 +52,16 @@ const ProfileCard = ({ userData, activeTab }: IprofileCardProps) => {
             activeTab == "Bought" ? "bg-white text-black font-[700]" : ""
           }  flex  items-center`}
         >
-          <Apartment color={activeTab == "Bought" ? "black" : "white"} />
+          <StoreFront color={activeTab == "Bought" ? "black" : "white"} />
           <span className="ml-4">Bought</span>
+        </div>
+        <div
+          className={`border border-white px-6 py-2 ${
+            activeTab == "Rented" ? "bg-white text-black font-[700]" : ""
+          } flex  items-center`}
+        >
+          <Apartment color={activeTab == "Rented" ? "black" : "white"} />
+          <span className="ml-4">Rented</span>
         </div>
         <div
           className={`border border-white px-6 py-2 ${
@@ -68,7 +76,7 @@ const ProfileCard = ({ userData, activeTab }: IprofileCardProps) => {
             activeTab == "On Rent" ? "bg-white text-black font-[700]" : ""
           } flex  items-center`}
         >
-          <StoreFront color={activeTab == "On Rent" ? "black" : "white"} />
+          <Apartment color={activeTab == "On Rent" ? "black" : "white"} />
           <span className="ml-4">On Rent</span>
         </div>
       </div>

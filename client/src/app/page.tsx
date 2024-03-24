@@ -1,3 +1,6 @@
+import Logout from "@/assets/logout";
+import Button from "@/components/Button";
+import Footer from "@/components/Footer";
 import HouseCard from "@/components/HouseCard";
 import HouseCardHori from "@/components/HouseCardHori";
 import Navbar from "@/components/Navbar";
@@ -5,7 +8,6 @@ import ParticularLandCard from "@/components/ParticularLandCard";
 import ParticularLandDesc from "@/components/ParticularLandDesc";
 import ParticularLandGallery from "@/components/ParticularLandGallery";
 import ProfileCard from "@/components/ProfileCard";
-import Image from "next/image";
 
 const dummyDataArray: Iproperty[] = [
   {
@@ -117,6 +119,17 @@ export default function Home() {
           return <HouseCardHori key={ind} property={item} />;
         })}
       </div>
+      <div className="my-8 w-full">
+        <Footer />
+      </div>
+
+      <div className="m-4 w-[30%]">
+        <Button title="Sign Out">
+          <Logout />
+        </Button>
+      </div>
+      {/* Buttons width depend on container inside which it is used */}
+      <Button title="Proceed to Checkout"></Button>
     </main>
   );
 }
