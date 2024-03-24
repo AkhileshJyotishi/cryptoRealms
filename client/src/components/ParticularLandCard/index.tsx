@@ -26,7 +26,7 @@ const PriceSection = () => {
           name="price"
           id="price"
           placeholder="26.67"
-          className="rounded-xl px-2 py-1 max-w-[140px]"
+          className="rounded-xl px-2 py-1 max-w-[140px] md:max-w-[120px]"
         />
       </div>
       <Exchange />
@@ -39,7 +39,7 @@ const PriceSection = () => {
           name="equity"
           id="equity"
           placeholder="26.67"
-          className="rounded-xl px-2 py-1 max-w-[140px]"
+          className="rounded-xl px-2 py-1 max-w-[140px] md:max-w-[120px]"
         />
       </div>
     </div>
@@ -47,7 +47,7 @@ const PriceSection = () => {
 };
 const ParticularLandCard = () => {
   return (
-    <div className="bg-[#ffffff49] max-w-sm  min-w-96 rounded-xl border-[0.1px] border-[#fff] backdrop-blur-[6px] shadow-[0_4px_30px_0_rgba(0,0,0,0.1)] flex flex-col p-5">
+    <div className="bg-[#ffffff49] max-w-sm min-w-80 rounded-xl border-[0.1px] border-[#fff] sm:backdrop-blur-[6px] shadow-[0_4px_30px_0_rgba(0,0,0,0.1)] flex flex-col p-5 mx-auto">
       <p className="text-[26px] font-semibold pb-1 border-b-[2px]">
         IIIT Lucknow Gomti Nagar
       </p>

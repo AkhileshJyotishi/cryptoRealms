@@ -5,7 +5,7 @@ import React from "react";
 const ParticularLandGallery = ({ gallery }: { gallery: string[] }) => {
   return (
     <div
-      className="bg-[#ffffff49] rounded-2xl border-[0.1px] border-[#fff] backdrop-blur-[6px] shadow-[0_4px_30px_0_rgba(0,0,0,0.1)]
+      className="bg-[#ffffff49] rounded-2xl border-[0.1px] border-[#fff] sm:backdrop-blur-[6px] shadow-[0_4px_30px_0_rgba(0,0,0,0.1)]
     sm:grid md:grid-cols-8 w-full gap-4 h-full flex flex-col p-3 max-w-4xl"
     >
       <section className="col-start-1 col-span-4 h-full">

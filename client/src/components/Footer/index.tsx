@@ -6,7 +6,7 @@ import Link from "next/link";
 const FooterLinks = [
   {
     name: "Home",
-    path: "#",
+    path: "/",
   },
   {
     name: "Sell",
@@ -18,17 +18,17 @@ const FooterLinks = [
   },
   {
     name: "Buy",
-    path: "#",
+    path: "/properties",
   },
   {
     name: "My Properties",
-    path: "#",
+    path: "/dashboard",
   },
 ];
 
 const Footer = () => {
   return (
-    <div className="p-2 max-w-[1440px] w-[100%] flex items-center gap-4 justify-center">
+    <div className="p-2 max-w-[1440px] w-[100%] flex items-center gap-4 justify-center my-10 sm:my-16">
       <Image
         src={
           "https://media.istockphoto.com/id/1398087835/photo/pink-palace-hawa-mahal-jaipur-india-beautiful-sunset-view.jpg?s=612x612&w=0&k=20&c=S8X6bk4Mdp0xu624dFZCHfobotdwdIp7K1FEQJV6hkI="
@@ -43,7 +43,7 @@ const Footer = () => {
       <div className="flex min-w-[10%] flex-col gap-y-[1px] px-4">
         {FooterLinks.map((link, ind) => {
           return (
-            <Link key={ind} href={link.path} className="font-[600]">
+            <Link key={ind} href={link.path} className="font-[600] uppercase">
               {link.name}
             </Link>
           );
@@ -62,7 +62,7 @@ const Footer = () => {
           href={"https://github.com/AkhileshJyotishi/sBTCEstate"}
           className="font-[500] tracking-wider text-xl"
         >
-          Github
+          GITHUB
         </Link>
       </div>
     </div>

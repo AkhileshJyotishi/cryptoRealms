@@ -29,7 +29,7 @@ const team = [
 
 const Team = () => {
   return (
-    <div className="w-full flex flex-col gap-4 mx-4 my-10">
+    <div className="w-full flex flex-col gap-4 mx-4 my-16 sm:my-24">
       <div className="w-[90%] mx-auto text-3xl font-[600]">
         <span className="px-4">-</span> Team
       </div>

@@ -8,8 +8,8 @@ import Image from "next/image";
 
 const Promotion = () => {
   return (
-    <div className="w-full flex flex-col items-center gap-y-11 mx-4 my-10">
-      <div className="font-[600] text-2xl sm:text-3xl md:text-4xl w-full sm:w-[80%] text-center">
+    <div className="w-full flex flex-col items-center gap-y-16 mx-4 my-16 sm:my-24">
+      <div className="font-[500] text-2xl sm:text-3xl md:text-[40px] w-full sm:w-[80%] text-center">
         TRADE WITH CONFIDENCE. BACKED BY MAJOR PLAYERS
       </div>
       <div className="w-full sm:w-[90%] flex flex-wrap gap-y-6 justify-center">

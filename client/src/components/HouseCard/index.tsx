@@ -2,6 +2,7 @@
 import Image from "next/image";
 import houseStyle from "./house.module.css";
 import React from "react";
+import { useRouter } from "next/navigation";
 
 interface IHouseCardProps {
   property: Iproperty;
@@ -11,8 +12,17 @@ const HouseCard = ({ property }: IHouseCardProps) => {
   {
     /* Link to particular property page */
   }
+  const router = useRouter();
+  const handleRoute = (id: string) => {
+    router.push("/particularLand");
+  };
   return (
-    <div className="max-w-sm w-[300px] h-full rounded-xl bg-white ">
+    <div
+      onClick={() => {
+        handleRoute(property.id as string);
+      }}
+      className="max-w-sm w-[90%] sm:w-full h-full rounded-xl bg-white "
+    >
       <Image
         src={property.imageUrl}
         alt={property.name}

@@ -8,12 +8,19 @@ import StoreFront from "../../assets/storefront";
 interface IprofileCardProps {
   userData: Iuser;
   activeTab?: string;
+  className?: string;
 }
 
-const ProfileCard = ({ userData, activeTab }: IprofileCardProps) => {
+const ProfileCard = ({
+  userData,
+  activeTab,
+  className = "",
+}: IprofileCardProps) => {
   const addProperty = () => {};
   return (
-    <div className="bg-[#ffffff49] max-w-md min-w-80 rounded-xl border-[0.1px] border-[#fff] backdrop-blur-[6px] shadow-[0_4px_30px_0_rgba(0,0,0,0.1)] flex flex-col items-center justify-stretch">
+    <div
+      className={`bg-[#ffffff5d] max-w-md min-w-80 rounded-xl border-[0.1px] border-[#fff] sm:backdrop-blur-[3px] shadow-[0_4px_30px_0_rgba(0,0,0,0.1)] flex flex-col items-center justify-stretch ${className}`}
+    >
       <Image
         src={
           userData?.profileImage ??

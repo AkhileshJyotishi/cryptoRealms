@@ -52,7 +52,7 @@ const mapping: { [key: number]: string } = {
 
 const ParticularLandDesc = ({ land }: IParticularLandDescProps) => {
   return (
-    <div className="flex flex-col gap-y-4 p-2 max-w-4xl w-[90%]">
+    <div className="flex flex-col gap-y-4 py-6 md:py-10 max-w-4xl w-[100%]">
       <div className="flex flex-col gap-y-3">
         <p className="text-white text-3xl font-[500]">{land.name}</p>
         <p className="font-light text-md">{land.location}</p>

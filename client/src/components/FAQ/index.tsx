@@ -10,35 +10,36 @@ interface FAQItem {
 
 const faqData: FAQItem[] = [
   {
-    question: "What is Lorem Ipsum?",
+    question: "What is a decentralized website for property ownership?",
     answer:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+      "A decentralized website for property ownership is a platform built on blockchain technology, enabling transparent and immutable records of property ownership through decentralized applications (DApps).",
   },
   {
-    question: "Why do we use it?",
+    question: "Why use a decentralized website for property ownership?",
     answer:
-      "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+      "Using a decentralized website ensures secure and tamper-proof property records, reducing the risk of fraud and providing trust among users. Additionally, it eliminates the need for intermediaries, resulting in lower transaction costs and faster processing times.",
   },
   {
-    question: "Where does it come from?",
+    question:
+      "Where does the concept of decentralized property ownership originate?",
     answer:
-      "Contrary to popular belief, Lorem Ipsum is not simply random text.",
+      "The concept of decentralized property ownership originates from the principles of blockchain technology, where data is stored on a distributed ledger, accessible to all participants of the network. This ensures transparency, security, and immutability of property records.",
   },
   {
-    question: "What are the origins of Lorem Ipsum?",
+    question: "What are the benefits of decentralized property ownership?",
     answer:
-      "It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.",
+      "Decentralized property ownership offers numerous benefits, including increased transparency, reduced fraud, elimination of intermediaries, lower transaction costs, faster transactions, and global accessibility to property records.",
   },
   {
-    question: "Is Lorem Ipsum readable text?",
+    question: "Is property ownership through DApps reliable?",
     answer:
-      "Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text.",
+      "Yes, property ownership through decentralized applications (DApps) is reliable due to the inherent features of blockchain technology, such as decentralization, immutability, and cryptographic security. Many decentralized websites are leveraging DApps to provide secure and efficient property ownership solutions.",
   },
 ];
 
 const FAQ = () => {
   return (
-    <div className="w-full flex flex-col gap-4 mx-4 my-10">
+    <div className="w-full flex flex-col gap-4 mx-4 my-16">
       <div className="w-[90%] mx-auto text-3xl font-[600]">
         <span className="px-4">-</span> FAQ's
       </div>
