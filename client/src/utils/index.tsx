@@ -36,6 +36,8 @@ export const transferSTX=async(recipient1:string, amount1:number)=>{
       contractName: contractData.contractName,
       functionName: contractData.functions["transfer-stx"],
       functionArgs: [recipient,amount],
+      postConditionMode: PostConditionMode.Deny, 
+      postConditions: [], 
       onFinish: response => {
         // WHEN user confirms pop-up
         console.log("finish ho gta")

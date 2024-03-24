@@ -20,10 +20,10 @@ const Check = () => {
         <button className=" bg-pink-600 p-4 rounded-md" onClick={() => getLastPropertyId(user)}>
           get last id
         </button>
-        <button className=" bg-pink-600 p-4 rounded-md" onClick={() => transferSTX()}>
+        <button className=" bg-pink-600 p-4 rounded-md" onClick={() => transferSTX("ST1YT0PJ4FJ70932VQX7BEKY3A715T5S5ER3CQ4B3",2)}>
           transfer stx
         </button>
-        <button className=" bg-pink-600 p-4 rounded-md" onClick={() => simpleBuyShares()}>
+        <button className=" bg-pink-600 p-4 rounded-md" onClick={() => simpleBuyShares({propertyId1:1,shares1:1,recipient1:"ST1YT0PJ4FJ70932VQX7BEKY3A715T5S5ER3CQ4B3",pricePerShare1:1})}>
           simple buy
         </button>
       </div>
