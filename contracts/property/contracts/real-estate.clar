@@ -138,3 +138,17 @@
     property-detail (ok property-detail) 
 
     (err ERR-PROPERTY-NOT-AVAILABLE)))
+
+(define-public (transfer-stx (recipient principal) (amount uint))
+(stx-transfer? amount tx-sender recipient))
+
+(define-public (simple-buy-shares (property-id uint) (shares uint) (recipient principal) (price-per-share uint))
+  (let ((total-price (* shares price-per-share)))
+    ;; Handle the response of stx-transfer?
+    (match (stx-transfer? total-price tx-sender recipient)
+      success
+        ;; If stx-transfer? succeeds, proceed with ft-transfer?
+        (match (ft-transfer? property-shares shares tx-sender recipient)
+          success2 (ok true) ;; If ft-transfer? also succeeds, return true
+          failure2 (err failure2)) ;; Handle potential failure of ft-transfer?
+      failure (err failure)))) ;; Handle potential failure of stx-transfer?
