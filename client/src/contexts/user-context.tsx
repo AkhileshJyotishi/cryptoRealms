@@ -25,6 +25,7 @@ const [user, setUser] = useState<Iuser|null>(null)
 
 useEffect(() => {
     if (userSession.isUserSignedIn()) {
+      console.log(userSession.loadUserData().profile.stxAddress.testnet)
         setUser((prev)=>({...prev,walletAddress:userSession.loadUserData().profile.stxAddress.testnet}))
       }
 }, []);

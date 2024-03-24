@@ -5,8 +5,7 @@ import Navbar from "@/components/Navbar";
 import OurWork from "@/components/OurWork";
 import Promotion from "@/components/Promotion";
 import Team from "@/components/Team";
-import React from "react";
-
+import Check from "@/components/check";
 
 
 export const Main=()=> {
@@ -16,6 +15,7 @@ export const Main=()=> {
       <Hero />
       <OurWork />
       <Promotion />
+      <Check/>  
       <Team />
       <FAQ />
       <Footer />
