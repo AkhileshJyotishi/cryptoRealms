@@ -152,3 +152,6 @@
           success2 (ok true) ;; If ft-transfer? also succeeds, return true
           failure2 (err failure2)) ;; Handle potential failure of ft-transfer?
       failure (err failure)))) ;; Handle potential failure of stx-transfer?
+
+(define-read-only (get-last-property-id)
+  (ok (var-get last-property-id)))
