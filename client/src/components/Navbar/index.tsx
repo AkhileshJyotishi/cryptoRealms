@@ -1,6 +1,9 @@
 "use client";
 import Link from "next/link";
-import React from "react";
+import React, { useEffect,useState } from "react";
+import { showConnect } from '@stacks/connect';
+import {userSession} from "@/components/use-connect"
+import { useUserContext } from "@/contexts/user-context";
 
 const NavbarLink = [
   {
@@ -21,11 +24,37 @@ const NavbarLink = [
   },
 ];
 
-const walletAddress = "0xiedh3hduhdbuj42423ny7xny7nyn72n73exxnb";
 
-const connectWallet = () => {};
+
+
+
 
 const Navbar = () => {
+const {setUser,user}=useUserContext()
+  
+
+  const connectWallet = () => {
+    const myAppName = 'My Stacks Web-App'; // shown in wallet pop-up
+    const myAppIcon = window.location.origin + '/my_logo.png'; // shown in wallet pop-up
+    
+    showConnect({
+      userSession, // `userSession` from previous step, to access storage
+      appDetails: {
+        name: myAppName,
+        icon: myAppIcon,
+      },
+      onFinish: (s) => {
+        console.log(s.userSession.loadUserData())
+        setUser((prev)=>({...prev,walletAddress:s.userSession.loadUserData().profile.stxAddress.testnet}))
+        console.log("ho gya")
+      },
+      onCancel: () => {
+        console.log("cancel ho gya")
+        console.log('oops'); // WHEN user cancels/closes pop-up
+      },
+    });
+  
+  };
   return (
     <div className="z-50 max-w-[1660px]  w-[90%] fixed top-[40px]  flex justify-between items-center px-8 py-3 bg-[#ffffff49] rounded-full border-[1px] border-[#fff] sm:backdrop-blur-[6px] shadow-[0_4px_30px_0_rgba(0,0,0,0.1)]">
       <div className="text-white font-bold">Logo Here</div>
@@ -38,13 +67,13 @@ const Navbar = () => {
           );
         })}
       </div>
-      {walletAddress ? (
-        <div className="border border-white text-md font-semibold text-white px-2 py-1 rounded-full ">
-          {walletAddress.substring(0, 7) +
+      {user?.walletAddress ? (
+        <div className="border border-white text-sm font-semibold text-white px-2 py-1 rounded-full ">
+          {user?.walletAddress?.substring(0, 7) +
             "...." +
-            walletAddress.substring(
-              walletAddress.length - 4,
-              walletAddress.length - 1
+            user?.walletAddress?.substring(
+              user?.walletAddress?.length - 4,
+              user?.walletAddress?.length - 1
             )}{" "}
         </div>
       ) : (
