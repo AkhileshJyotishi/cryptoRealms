@@ -44,8 +44,8 @@ The following individuals have contributed to the CryptoRealms project:
    - Responsibilities: Implementation of blockchain components, decentralized functions, and user experience optimization.
 
 ## 2. [Akhilesh Jyotishi](https://github.com/AkhileshJyotishi)
-   - Role: Backend Developer
-   - Responsibilities: Development of backend functionalities, integration with Convex BaaS, and implementation of real-time collaboration features.
+   - Role: Frontend and Blockchain Developer
+   - Responsibilities: Implementation of blockchain components, decentralized functions, and user experience optimization.
 
 ## 3. [Yash Aggrawal](https://github.com/Yash7426)
    - Role: Frontend Developer
