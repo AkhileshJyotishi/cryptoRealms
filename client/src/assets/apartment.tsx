@@ -1,4 +1,4 @@
-const Apartment = ({ color }) => {
+const Apartment = ({ color }:{color:string}) => {
     return (
       <svg
         width="24"

@@ -75,7 +75,7 @@ const Dashboard = () => {
     walletAddress: "0vctftvcdftyyftytybunyunnnnnnn4e",
   };
   return (
-    <div className="bg-black max-w-[1660px] mx-auto flex min-h-screen flex-col justify-between items-center px-2 sm:px-6 lg:px-8 pt-32 sm:pt-40">
+    <div className="bg-black max-w-[1660px] mx-auto flex min-h-screen flex-col gap-y-8 items-center px-2 sm:px-6 lg:px-8 pt-32 sm:pt-40">
       <Navbar />
       <div className="flex flex-col md:items-start items-center gap-y-5 md:justify-start md:flex-row gap-x-6">
         <div>

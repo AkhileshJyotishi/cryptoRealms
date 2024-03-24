@@ -27,7 +27,7 @@ const ParticularLand = () => {
 
   function handleProceed() {}
   return (
-    <div className="bg-black max-w-[1660px] mx-auto flex min-h-screen flex-col justify-between items-center px-2 sm:px-6 lg:px-8 pt-32 sm:pt-40">
+    <div className="bg-black max-w-[1660px] mx-auto flex min-h-screen flex-col gap-y-8 items-center px-2 sm:px-6 lg:px-8 pt-32 sm:pt-40">
       <Navbar />
       <div className="flex flex-col justify-center items-center lg:items-start gap-y-6 lg:justify-start lg:flex-row gap-x-6 w-[90%]">
         <div className="w-full lg:w-[64%]">

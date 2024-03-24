@@ -9,7 +9,7 @@ import React from "react";
 
 const Main = () => {
   return (
-    <div className="bg-black max-w-[1660px] mx-auto flex min-h-screen flex-col justify-between items-center p-2 sm:p-6 lg:p-8">
+    <div className="bg-black max-w-[1660px] mx-auto flex min-h-screen flex-col gap-y-8 items-center p-2 sm:p-6 lg:p-8">
       <Navbar />
       <Hero />
       <OurWork />
