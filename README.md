@@ -54,3 +54,8 @@ The following individuals have contributed to the CryptoRealms project:
 ## 4. [Mayank Rawat](https://github.com/smayank1214)
    - Role: User Interface Designer
    - Responsibilities: Designing the web design and ensuring a smooth user experience for navigating through the website.
+
+## Deployed Contracts Link / Images
+<a href="https://explorer.hiro.so/txid/ST1EPAADB7G21X2RYE5N6FWQMD162BGSSNTAYMJSN.real-estate-contract?chain=testnet">Contract in Block Explorer</a>
+![Screenshot from 2024-03-25 21-04-31](https://github.com/AkhileshJyotishi/cryptoRealms/assets/119874648/1690f48e-094b-4dab-b220-59fa81fae7b0)
+
