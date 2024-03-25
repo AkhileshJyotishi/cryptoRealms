@@ -14,7 +14,7 @@ export const Main = () => {
       <Hero />
       <Promotion />
       <OurWork />
-      <Check />
+      {/* <Check /> */}
       <Team />
       <FAQ />
       <Footer />
