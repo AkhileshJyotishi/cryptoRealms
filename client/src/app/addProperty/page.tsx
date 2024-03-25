@@ -8,6 +8,7 @@ import { CiCircleInfo } from "react-icons/ci";
 import { FaFileCircleExclamation } from "react-icons/fa6";
 import { MdOutlineShareLocation } from "react-icons/md";
 import { SiBitcoin } from "react-icons/si";
+import { listProperty } from "@/utils";
 
 const AddProperty = () => {
   const [formfields, setFormfield] = useState({
@@ -31,6 +32,7 @@ const AddProperty = () => {
     const { name, value } = e.target;
     if (name == "files") {
       // @ts-ignore
+      console.log("he")
       const files = (e.target as any)?.files;
       const imageUrl: string[] = [];
       if (files && files.length > 0) {
@@ -55,6 +57,7 @@ const AddProperty = () => {
           );
           const resp = await response.json();
           imageUrl.push(resp.url);
+          console.log(imageUrl)
         });
         // @ts-ignore
         setFormfield((prev) => {
@@ -303,6 +306,7 @@ const AddProperty = () => {
       <Button
         title="Complete Process"
         className="!w-[90%] md:!w-[50%] max-w-md mx-auto !z-50"
+        onClick={()=>listProperty({area1:formfields.area,address1:formfields.address,BHK1:0,category1:formfields.category,country1:formfields.country,description1:formfields.country,images1:formfields.files,name1:formfields.nameProp,pincode1:formfields.pincode.toString(),price1:formfields.price,state1:formfields.state,status1:"available"})}
       ></Button>
       <Footer />
     </div>
