@@ -3,6 +3,7 @@ import Navbar from "@/components/Navbar";
 import React from "react";
 import PropertyHero from "./PropertyHero";
 import Footer from "@/components/Footer";
+import UpperGradient from "@/components/upperGradient";
 
 const Properties = () => {
   const dummyDataArray: Iproperty[] = [
@@ -71,9 +72,9 @@ const Properties = () => {
   return (
     <div className="bg-black max-w-[1660px] mx-auto flex min-h-screen flex-col gap-y-8 items-center px-2 sm:px-6 lg:px-8 pt-32 sm:pt-40">
       <Navbar />
-
+      <UpperGradient />
       <PropertyHero />
-      <div className="max-w-[1330px] mx-auto w-full flex flex-wrap justify-center sm:grid gap-6 grid-cols-2 md:grid-cols-3 place-items-center my-8">
+      <div className="max-w-[1330px] mx-auto w-full flex flex-wrap justify-center sm:grid gap-6 grid-cols-2 md:grid-cols-3 place-items-center my-8 z-10">
         {dummyDataArray.map((item, ind) => {
           return <HouseCard key={ind} property={item} />;
         })}

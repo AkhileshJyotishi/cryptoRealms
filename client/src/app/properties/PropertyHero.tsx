@@ -9,7 +9,7 @@ const PropertyHero = () => {
     setIsChecked(!isChecked);
   };
   return (
-    <div className="flex flex-col items-center gap-y-8 mb-10 sm:mb-16">
+    <div className="flex flex-col items-center gap-y-8 mb-10 sm:mb-16 z-10">
       <p className="text-xs">
         <span className="mx-2">-</span>Decentralizing the Real Estate
       </p>

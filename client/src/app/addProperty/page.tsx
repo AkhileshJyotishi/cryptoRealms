@@ -2,6 +2,7 @@
 import Button from "@/components/Button";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
+import UpperGradient from "@/components/upperGradient";
 import React, { useState } from "react";
 import { CiCircleInfo } from "react-icons/ci";
 import { FaFileCircleExclamation } from "react-icons/fa6";
@@ -37,8 +38,14 @@ const AddProperty = () => {
         Array.from(files).map(async (file: any) => {
           const image = new FormData();
           image.append("file", file);
-          image.append("cloud_name", "di8ui03yr");
-          image.append("upload_preset", "oddunv6t");
+          image.append(
+            "cloud_name",
+            process.env.NEXT_PUBLIC_CLOUD_NAME as string
+          );
+          image.append(
+            "upload_preset",
+            process.env.NEXT_PUBLIC_UPLOAD_PRESET as string
+          );
           const response = await fetch(
             "https://api.cloudinary.com/v1_1/di8ui03yr/image/upload",
             {
@@ -69,10 +76,11 @@ const AddProperty = () => {
   return (
     <div className="bg-black max-w-[1660px] mx-auto flex min-h-screen flex-col gap-y-8 items-center px-2 sm:px-6 lg:px-8 pt-32 sm:pt-40">
       <Navbar />
-      <div className="w-[100%] sm:w-[90%] text-center tracking-wider mx-auto text-xl sm:text-3xl font-[500]">
+      <UpperGradient />
+      <div className="w-[100%] sm:w-[90%] text-center tracking-wider mx-auto text-xl sm:text-3xl font-[500] z-10">
         <span className="px-4">-</span> Add Property
       </div>
-      <div className="w-full sm:w-[90%] p-6 border rounded-lg flex flex-col  items-start gap-y-8">
+      <div className="z-10 w-full sm:w-[90%] p-6 border rounded-lg flex flex-col  items-start gap-y-8">
         <p className="font-[600] text-2xl flex gap-4 items-center">
           <span>
             <CiCircleInfo strokeWidth={"0.5px"} />
@@ -175,7 +183,7 @@ const AddProperty = () => {
           </div>
         </div>
       </div>
-      <div className="w-full sm:w-[90%] p-6 border rounded-lg flex flex-col  items-start gap-y-8">
+      <div className="z-10 w-full sm:w-[90%] p-6 border rounded-lg flex flex-col  items-start gap-y-8">
         <p className="font-[600] text-2xl flex gap-4 items-center">
           <span>
             <MdOutlineShareLocation />
@@ -241,7 +249,7 @@ const AddProperty = () => {
           </div>
         </div>
       </div>
-      <div className="w-full sm:w-[90%] p-6 border rounded-lg flex flex-col  items-start gap-y-8">
+      <div className="z-10 w-full sm:w-[90%] p-6 border rounded-lg flex flex-col  items-start gap-y-8">
         <p className="font-[600] text-2xl flex gap-4 items-center">
           <span>
             <FaFileCircleExclamation />
@@ -266,7 +274,7 @@ const AddProperty = () => {
           </div>
         </div>
       </div>
-      <div className="w-full sm:w-[90%] p-6 border rounded-lg flex flex-col  items-start gap-y-8">
+      <div className="z-10 w-full sm:w-[90%] p-6 border rounded-lg flex flex-col  items-start gap-y-8">
         <div className="flex justify-center items-start w-[90%] sm:w-[49%] flex-col gap-y-[5px]">
           <p className="flex text-2xl items-center font-[500]">
             <span className="mr-4">
@@ -294,7 +302,7 @@ const AddProperty = () => {
       </div>
       <Button
         title="Complete Process"
-        className="!w-[90%] md:!w-[50%] max-w-md mx-auto"
+        className="!w-[90%] md:!w-[50%] max-w-md mx-auto !z-50"
       ></Button>
       <Footer />
     </div>

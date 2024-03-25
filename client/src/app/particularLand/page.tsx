@@ -4,6 +4,7 @@ import Navbar from "@/components/Navbar";
 import ParticularLandCard from "@/components/ParticularLandCard";
 import ParticularLandDesc from "@/components/ParticularLandDesc";
 import ParticularLandGallery from "@/components/ParticularLandGallery";
+import UpperGradient from "@/components/upperGradient";
 import React from "react";
 
 const ParticularLand = () => {
@@ -29,7 +30,8 @@ const ParticularLand = () => {
   return (
     <div className="bg-black max-w-[1660px] mx-auto flex min-h-screen flex-col gap-y-8 items-center px-2 sm:px-6 lg:px-8 pt-32 sm:pt-40">
       <Navbar />
-      <div className="flex flex-col justify-center items-center lg:items-start gap-y-6 lg:justify-start lg:flex-row gap-x-6 w-[90%]">
+      <UpperGradient />
+      <div className="flex flex-col justify-center items-center lg:items-start gap-y-6 lg:justify-start lg:flex-row gap-x-6 w-[90%] z-10">
         <div className="w-full lg:w-[64%]">
           <ParticularLandGallery gallery={imageGallery} />
           <ParticularLandDesc land={defaultLandDesc} />

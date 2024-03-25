@@ -29,7 +29,7 @@ const FooterLinks = [
 
 const Footer = () => {
   return (
-    <div className="p-2 max-w-[1440px] w-[100%] flex items-center gap-4 justify-center my-10 sm:my-16">
+    <div className=" p-2 max-w-[1440px] w-[100%] flex items-center gap-4 justify-center my-10 sm:my-16 z-20">
       <Image
         src={logo_text}
         alt="logo"

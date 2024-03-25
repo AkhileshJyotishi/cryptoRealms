@@ -11,8 +11,9 @@ const ParticularLandGallery = ({ gallery }: { gallery: string[] }) => {
       <section className="col-start-1 col-span-4 h-full">
         <div className="relative h-[360px]">
           {gallery &&
-            (gallery?.slice(0, 1) ?? []).map((img) => (
+            (gallery?.slice(0, 1) ?? []).map((img,ind) => (
               <Image
+              key={ind}
                 alt=""
                 width={400}
                 height={400}
@@ -27,8 +28,9 @@ const ParticularLandGallery = ({ gallery }: { gallery: string[] }) => {
       <section className="col-span-4 h-full">
         <div className="flex flex-col sm:grid grid-cols-2 grid-rows-2 gap-4 md:h-[360px] ">
           {gallery &&
-            (gallery?.slice(1, 5) ?? []).map((img) => (
+            (gallery?.slice(1, 5) ?? []).map((img,ind) => (
               <Image
+                key={ind}
                 alt=""
                 width={400}
                 height={400}
